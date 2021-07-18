@@ -16,7 +16,7 @@
             width: 80%;
         }
 
-        #blogs
+        #blogs-container
         {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -28,7 +28,7 @@
             width: 80%;
         }
 
-        #blogs .card
+        #blogs-container .card
         {
             border: 1px solid black;
             height: 300px;
@@ -37,17 +37,17 @@
             justify-content: center;
         }
 
-        #blogs .card:nth-child(2)
+        #blogs-container .card:nth-child(2)
         {
             margin-top: 3em;
         }
 
-        #blogs .card:nth-child(odd)
+        #blogs-container .card:nth-child(odd)
         {
             margin-top: -3em;
         }
 
-        #blogs .card:first-child
+        #blogs-container .card:first-child
         {
             margin-top: 0px;
         }
@@ -151,10 +151,10 @@
             </div>
         </div>
     </div>
-    <div id="blogs"></div>
+    <div id="blogs-container"></div>
     <script>
         let panels = Array.from(Array(10).keys());
-        const parent = document.getElementById("blogs");
+        const parent = document.getElementById("blogs-container");
 
         const buildPanels = () => {
             panels.forEach( panel => { 
