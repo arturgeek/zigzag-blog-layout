@@ -142,12 +142,18 @@
             </h1>
             <div class="category-form">
                 <span>Which category can we help you with?</span>
-                <select name="" id="">
-                    <option value="all">Select All</option>
-                    <option value="insurance">Insurance</option>
-                    <option value="dental">Dental</option>
-                    <option value="other">Other</option>
-                </select>
+                <div class="select-category-group">
+                    <div class="button">Select Category</div>
+                    <div class="input">
+                        <div class="category-item" data-category="">Select All</div>
+                        <div class="category-item" data-category="health_insurance">Health Insurance</div>
+                        <div class="category-item" data-category="medicare">Medicare</div>
+                        <div class="category-item" data-category="life_insurance">Life Insurance</div>
+                        <div class="category-item" data-category="dental_visions">Dental & Visions</div>
+                        <div class="category-item" data-category="additional_products">Additional Products </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
