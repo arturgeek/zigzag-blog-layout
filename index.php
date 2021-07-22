@@ -141,9 +141,12 @@
                 <small>Important updates and insights that will help you make the right healthcare decisions.</small>
             </h1>
             <div class="category-form">
-                <span>Which category can we help you with?</span>
+                <span class="instruction">Which category can we help you with?</span>
                 <div class="select-category-group">
-                    <div class="button">Select Category</div>
+                    <div class="button">
+                        <span>Select Category</span>
+                        <i>&#9662;</i>
+                    </div>
                     <div class="input">
                         <div class="category-item" data-category="">Select All</div>
                         <div class="category-item" data-category="health_insurance">Health Insurance</div>

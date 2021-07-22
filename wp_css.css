@@ -1,3 +1,18 @@
+#blogs-container
+{
+    position: relative;
+}
+
+#blogs-container .divider
+{
+    background: #bfbfbf;
+    height: 97%;
+    left: 49.9%;
+    position: absolute;
+    top: 2em;
+    width: 0.1%;
+}
+
 #blogs-container .fusion-posts-container
 {
     display: grid;
@@ -19,6 +34,7 @@
 #blogs-container .fusion-posts-container article .fusion-post-content
 {
     padding: 0em;
+    position: relative;
 }
 
 #blogs-container .fusion-posts-container article .fusion-flexslider,
@@ -59,6 +75,30 @@
 #blogs-container .fusion-posts-container article h2 a
 {
     font-size: 16px;
+}
+
+#blogs-container .fusion-posts-container article:nth-child(odd) h2::after
+{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #bfbfbf;
+    position: absolute;
+    top: 50%;
+    right: -2em;
+    width: 2em;
+}
+
+#blogs-container .fusion-posts-container article:nth-child(even) h2::before
+{
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #bfbfbf;
+    position: absolute;
+    top: 50%;
+    left: -2.1em;
+    width: 2.1em;
 }
 
 #blogs-container .fusion-posts-container article:nth-child(2)
@@ -105,11 +145,16 @@
     margin-right: 1em;
     padding: 10px;
     line-height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95px;
+    width: 95px;
 }
 
 #search .circle i
 {
-    font-size: 24px;
+    font-size: 30px;
     padding-top: 2px;
 }
 
@@ -141,7 +186,7 @@
     justify-content: space-between;
 }
 
-#search .category-form span
+#search .category-form .instruction
 {
     color: #01759B;
     font-weight: bold;
@@ -151,15 +196,23 @@
 {
     display: flex;
     flex-direction: column;
+    max-width: 200px;
     position: relative;
     width: 50%;
+    max-width: 200px;
 }
 
 #search .select-category-group .button
 {
     border-bottom: 3px solid #1b84a7;
+    cursor: pointer;
     padding: 0.5em;
     width: 100%;
+}
+
+#search .select-category-group .button i
+{
+    float: right;
 }
 
 #search .select-category-group .input
@@ -167,13 +220,14 @@
     background: #f6f8f9;
     display: flex;
     flex-direction: column;
+    height: 0px;
+    overflow: hidden;
     position: absolute;
     padding: 0em;
+    top: 50px;
     transition: all 0.5s ease;
     width: 100%;
     z-index: 100;
-    height: 0px;
-    overflow: hidden;
 }
 
 #search .select-category-group .input.active
@@ -183,7 +237,6 @@
 
 #search .select-category-group .input .category-item {
     padding: 0.5em;
-    box-shadow: inset 0px -2px #1b84a7;
     transition: all 0.5s ease;
 }
 #search .select-category-group .input .category-item:hover {
@@ -217,5 +270,12 @@
     #search .select-category-group
     {
         width: 100%;
+    }
+
+    #blogs-container .fusion-posts-container article:nth-child(odd) h2::after,
+    #blogs-container .fusion-posts-container article:nth-child(even) h2::before,
+    #blogs-container .divider
+    {
+        display: none;
     }
 }
