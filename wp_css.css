@@ -119,7 +119,8 @@
 #search
 {
     background: #F6F8F9 0% 0% no-repeat padding-box;
-    margin: 0em auto;
+    margin: -1em auto 0em;
+    padding: 1em 2em;
     padding: 2em;
     width: 100%;
     display: flex;
@@ -236,7 +237,7 @@
 }
 
 #search .select-category-group .input .category-item {
-    padding: 0.5em;
+    padding: 0em 0.5em;
     transition: all 0.5s ease;
 }
 #search .select-category-group .input .category-item:hover {
