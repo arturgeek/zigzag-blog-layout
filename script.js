@@ -161,10 +161,20 @@ function AddEvents()
 			const target = event.target || event.srcElement;
 			const selected_option = target.getAttribute('data-category');
 			selectOptions.classList.toggle("active");
-			const category_name = GetCategoryNameFromURL( selected_option );
+			let category_name = GetCategoryNameFromURL( selected_option );
+			category_name = category_name === "" ? "Select a Category" : category_name;
 			selectButtonText.innerHTML = category_name;
 			Filter(selected_option);
 		});
+	});
+	
+	document.addEventListener("click", (e) => {
+		const optionsContainer = document.querySelector("#search .select-category-group");
+		
+		console.log(e.target.id, optionsContainer.id);
+		if(e.target.id !== optionsContainer.id  ){
+			optionsContainer.classList.remove("active");
+		}
 	});
 }
 
