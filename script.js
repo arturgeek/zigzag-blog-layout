@@ -102,7 +102,7 @@ function BuildOptionsBasedOnCategories( categories_to_create )
     if( categories_to_create.length > 0 )
     {
         selectOptions.innerHTML = "";
-        let option = BuildOption("Select All", "")
+        let option = BuildOption("Everything", "")
         selectOptions.appendChild(option);
         categories_to_create.forEach( category => {
             let option_name = GetCategoryNameFromURL( category );
@@ -124,6 +124,7 @@ function BuildOption( text, value )
 function AddEvents()
 {
 	const selected = document.querySelector(".selected");
+    const selectGroup = document.querySelector("#search .select-category-group");
 	const optionsContainer = document.querySelector(".options-container");
 	const optionsList = document.querySelectorAll(".option");
 	const selectButton = document.querySelector("#search .select-category-group .button");
@@ -162,20 +163,18 @@ function AddEvents()
 			const selected_option = target.getAttribute('data-category');
 			selectOptions.classList.toggle("active");
 			let category_name = GetCategoryNameFromURL( selected_option );
-			category_name = category_name === "" ? "Select a Category" : category_name;
+			category_name = category_name === "" ? "Everything" : category_name;
 			selectButtonText.innerHTML = category_name;
 			Filter(selected_option);
 		});
 	});
 	
 	document.addEventListener("click", (e) => {
-		const optionsContainer = document.querySelector("#search .select-category-group");
-		
-		console.log(e.target.id, optionsContainer.id);
-		if(e.target.id !== optionsContainer.id  ){
-			optionsContainer.classList.remove("active");
-		}
-	});
+        console.log(e.target.id, selectGroup.id);
+        if(e.target.id !== selectGroup.id && e.target.id !== selectButton.id ){
+            selectOptions.classList.remove("active");
+        }
+    });
 }
 
 function GetCategoryNameFromURL( category )
