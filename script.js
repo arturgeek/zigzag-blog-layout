@@ -93,7 +93,7 @@ function CreateCategoriesForSelector()
             categories_to_create.push(category_name); 
         } 
     });
-    BuildOptionsBasedOnCategories(categories_to_create);
+    //BuildOptionsBasedOnCategories(categories_to_create);
 }
 
 function BuildOptionsBasedOnCategories( categories_to_create )

@@ -129,11 +129,10 @@
     </style>
 </head>
 <body>
+    [allow_only_with_key]
     <div id="search">
         <div class="logo">
-            <div class="circle">
-                <i class="fas fa-comment-alt"></i>
-            </div>
+            <img src="/wp-content/uploads/2021/07/mbhealthicon-01_22081921645.png" alt="Blog Logo" />
         </div>
         <div class="title">
             <h1>
@@ -141,22 +140,25 @@
                 <small>Important updates and insights that will help you make the right healthcare decisions.</small>
             </h1>
             <div class="category-form">
-                <span class="instruction">Which category can we help you with?</span>
-                <div class="select-category-group">
+                <span class="instruction">I want to learn about</span>
+                <div id="btnOpenCategories" class="select-category-group">
                     <div class="button">
-                        <span>Select Category</span>
+                        <span>Everything</span>
                         <i>&#9662;</i>
                     </div>
                     <div class="input">
-                        <div class="category-item" data-category="">Select All</div>
-                        <div class="category-item" data-category="health_insurance">Health Insurance</div>
-                        <div class="category-item" data-category="medicare">Medicare</div>
-                        <div class="category-item" data-category="life_insurance">Life Insurance</div>
-                        <div class="category-item" data-category="dental_visions">Dental & Visions</div>
-                        <div class="category-item" data-category="additional_products">Additional Products </div>
+                        <div class="category-item" data-category="">Everything</div>
+                        <div class="category-item" data-category="enrollment" >Enrollment</div>
+                        <div class="category-item" data-category="family" >Family</div>
+                        <div class="category-item" data-category="hsa" >HSA</div>
+                        <div class="category-item" data-category="health-insurance" >Health Insurance</div>
+                        <div class="category-item" data-category="individual" >Individual</div>
+                        <div class="category-item" data-category="life insurance" >life insurance</div>
+                        <div class="category-item" data-category="affordable-care-act-obamacare" >Obamacare</div>
+                        <div class="category-item" data-category="self-employed" >Self Employed</div>
+                        <div class="category-item" data-category="taxes" >Taxes</div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
